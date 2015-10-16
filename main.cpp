@@ -146,6 +146,11 @@ int main( int argc , char** argv ) {
         avg_rho[3][i] += rho[3][i];
       }
     */	
+     calc_Unb() ;
+
+      fprintf( otp , "%d %d %lf %lf %lf %lf %lf %lf %lf\n" , step ,n_surf_bonds,Ubond , U_chi_gg, U_kappa_gg,U_chi_pg,U_kappa_pg,U_kappa_pp , Utt) ;
+      fflush( otp ) ;
+
 
 
       num_averages += 1.0 ;
@@ -206,10 +211,10 @@ int main( int argc , char** argv ) {
 
       }
 
-      calc_Unb() ;
+    //  calc_Unb() ;
 
-      fprintf( otp , "%d %d %lf %lf %lf %lf %lf %lf %lf\n" , step ,n_surf_bonds,Ubond , U_chi_gg, U_kappa_gg,U_chi_pg,U_kappa_pg,U_kappa_pp , Utt) ;
-      fflush( otp ) ;
+     // fprintf( otp , "%d %d %lf %lf %lf %lf %lf %lf %lf\n" , step ,n_surf_bonds,Ubond , U_chi_gg, U_kappa_gg,U_chi_pg,U_kappa_pg,U_kappa_pp , Utt) ;
+     // fflush( otp ) ;
 
     }// if step % print_Freq == 0
 
