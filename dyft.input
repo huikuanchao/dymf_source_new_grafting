@@ -1,0 +1,41 @@
+3           Nsp, # of specises 
+14 26       Na, Nb for the diblock
+0.000  16     Volume fraction, chain length for A homopolymers
+0.000 16     Volume fraction, chain length for B homopolymers
+0.5   16      Volume  fraction, chain length for C homopolymres
+1.0         CG_ratio 
+
+0.15     Volume fraction nanoparticles
+0.0 30 2 Grafted chain density, length of grafted chains
+1.26     Rp, nanoparticle radius
+0.252     Xi, nanoparticle interface width
+1       particle_type flag (0 = neutral, 1 = type A)
+
+5.0     C, in units normalized by diblock properties
+40 20  20    chi*N, N taken from diblock properties
+100.0  100   kappa*N, N taken from diblocks
+1.0 1.0 1.0 1.0 1.0  Monomer mobility/diffusion coefficients
+
+31.2 18.7 12 Lx, Ly, Lz
+42 48 48    Nx, Ny, Nz
+0.05       time step
+1           grid interpolation order
+
+5000000       simulation steps
+20        print frequency
+000        pre-equilibration steps (chiAB = 0)
+000 20  sample_wait, sample_freq
+100          stress_frequency
+2000     frame_freq
+#optm_L paras#
+0 0        optm_L(0: reg 1: lam, 2: cyl ),L_dim
+2500       L_fren:frenqence of change L
+250        L_aver:number of iter in aver steee after L_fren
+0.02       lam_L  
+#wall paras#
+1 1 1 1 1  wall_para(0:no w,1:neutra), wall_lamb
+2.45   wall_thick
+#graft para#
+1 2000 graft_surface graft_surf_wait 
+10   surf_k
+
